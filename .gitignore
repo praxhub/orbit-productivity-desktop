@@ -1,0 +1,22 @@
+# Never commit local use data or secrets
+.env
+.env.*
+*.token
+*credentials*
+*secret*
+
+# ORBIT runtime data (normally stored outside the source tree)
+tasks.json
+study-sessions.json
+ORBIT-Memories/
+Pictures/ORBIT-Memories/
+
+# Local backups, editor/temp artifacts and generated captures
+*.backup
+*.backup-*
+*.bak
+*.tmp
+*.swp
+*~
+*.log
+screenshots/
