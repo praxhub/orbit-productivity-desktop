@@ -221,3 +221,9 @@ Contributions, suggestions, and feedback are welcome.
 ---
 
 *ORBIT Productivity Desktop — Focus. Build. Repeat.*
+
+---
+
+## License
+
+ORBIT Productivity Desktop is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
