@@ -1,64 +1,223 @@
-# ORBIT v12 — Study Focus + Minimal Black
+# ORBIT Productivity Desktop 🟠
 
-A local-first GNOME Shell 50 desktop layer for Ubuntu. The current release focuses on time, tasks, Pomodoro, personal photo memories, local study/break tracking, and a daily Thirukkural. **The News/video panel is intentionally removed.**
+**A Minimalist Ubuntu GNOME Productivity Desktop — Built for Focus, Study, and Daily Progress.**
 
-## v12 alignment fix
+ORBIT is a desktop productivity project designed for Ubuntu GNOME. It combines a clean black-and-orange interface with a Pomodoro timer, study-session tracking, a task manager, personal photo memories, and a daily Thirukkural.
 
-The clock/greeting hero card is now constrained to a deliberate height. The old expanding inner clock row caused the card to consume the left column's unused vertical space, leaving the dial low in the panel while the greeting stayed at the top. The row fills the fixed-height card, the clock remains a fixed 168×168 circle, and the greeting stack is vertically centered alongside it. The v11 Pomodoro dial uses a centered overlay instead of spacer actors so its caption cannot clip to `FOCU-`.
+The goal is simple: create a focused desktop environment that helps you organize tasks, track productive study time, and build consistent habits.
 
-## Features
+---
 
-- Minimal matte-black wallpaper with restrained orange accents.
-- Live time/date, greeting, daily quote, and a scenic quote area.
-- To-do list with priorities, Today/Upcoming/Completed views, and a selectable month/day calendar for deadlines.
-- Large Pomodoro: Focus (25 min), Short Break (5 min), Long Break (15 min).
-- Local study and break history with today totals, hourly focus summary and recent sessions.
-- Memories from `~/Pictures/ORBIT-Memories`.
-- Daily Thirukkural in Tamil, English meaning, and explanation.
-- Native desktop background-group placement so the layer remains beneath ordinary app windows.
+## 🖥️ Interface Preview
 
-## Local data
+![ORBIT Productivity Desktop Interface](ORBIT-Interface.png)
 
-- Tasks: `~/.local/share/orbit-desktop-layer/tasks.json`
-- Study history: `~/.local/share/orbit-desktop-layer/study-sessions.json`
-- Personal photos: `~/Pictures/ORBIT-Memories/`
+---
 
-The source/publish script does not upload any of this local data.
+## ✨ Features
 
-## Install/update on Ubuntu GNOME 50
+### 🕒 Clock and Daily Greeting
+- Live clock and date.
+- Greeting and motivational text.
+- Minimal black-and-orange appearance.
+
+### ✅ To-Do List
+- Manage daily tasks.
+- Organize tasks into Today, Upcoming, and Completed views.
+- Set task priorities.
+- Select task deadlines using a calendar.
+- Track completed tasks and overall progress.
+
+### 🍅 Pomodoro Focus Timer
+- **Focus:** 25 minutes.
+- **Short Break:** 5 minutes.
+- **Long Break:** 15 minutes.
+- Start, pause, and reset timer sessions.
+- Track focus time and break durations.
+
+### 📊 Study Productivity Tracker
+- Record focus and break sessions locally.
+- View daily focused time and break time.
+- Count completed or interrupted sessions.
+- Review recent study-session history.
+- View productive study hours grouped by session start time.
+
+### 🖼️ Personal Photo Memories
+- Display personal photos on the desktop.
+- Navigate through your photo collection.
+- Keep photos stored locally on your computer.
+
+Photo directory:
+
+`~/Pictures/ORBIT-Memories/`
+
+### 📜 Daily Thirukkural
+- Tamil couplet.
+- English meaning.
+- Explanation and reflection.
+- Navigation between entries.
+
+### 🎨 Minimal Black-and-Orange Design
+- Matte-black background.
+- Warm orange highlights and borders.
+- Clean typography and simple controls.
+- Optional matching wallpaper.
+
+---
+
+## 🛠️ Technology
+
+- JavaScript
+- GNOME Shell Extensions
+- GNOME Shell UI toolkit
+- CSS
+- Bash
+- JSON
+- Git and GitHub
+
+---
+
+## 💻 Requirements
+
+- Ubuntu with GNOME Shell 50.x.
+- GNOME user extensions enabled.
+- Bash and Python 3 for the provided scripts.
+- Git for version control and GitHub publishing.
+
+ORBIT was developed for Ubuntu GNOME 50.1. Compatibility and appearance may differ on other GNOME versions.
+
+---
+
+## 🚀 Installation
+
+### 1. Download the project
+
+Clone this repository:
+
+```bash
+git clone https://github.com/praxhub/orbit-productivity-desktop.git
+```
+
+Enter the project directory:
+
+```bash
+cd orbit-productivity-desktop
+```
+
+### 2. Install ORBIT
+
+Run:
 
 ```bash
 bash ./INSTALL-ORBIT-STUDY-FOCUS.sh
 ```
 
-The installer backs up the currently installed extension outside GNOME's extension-scanning directory. If it reports `INACTIVE`, log out and back in once. Verify with:
+Follow the installer instructions.
+
+### 3. Check the extension
+
+Run:
 
 ```bash
 gnome-extensions show orbit-desktop-layer@local
 ```
 
-Restore the previous extension:
+The extension should report that it is enabled and active.
+
+If the extension does not activate immediately, save your work, log out of Ubuntu, and log back in.
+
+### 4. Apply the optional wallpaper
+
+```bash
+bash ./USE-ORBIT-MINIMAL-BLACK-WALLPAPER.sh
+```
+
+The wallpaper is optional; ORBIT's interface can be used with your preferred desktop background.
+
+---
+
+## 📁 Project Structure
+
+```text
+orbit-productivity-desktop/
+│
+├── extension.js
+├── stylesheet.css
+├── metadata.json
+├── README.md
+├── .gitignore
+├── VALIDATION.txt
+├── GITHUB_UPLOAD_GUIDE.md
+│
+├── INSTALL-ORBIT-STUDY-FOCUS.sh
+├── RESTORE-ORBIT-STUDY-FOCUS.sh
+├── USE-ORBIT-MINIMAL-BLACK-WALLPAPER.sh
+├── RESTORE-ORBIT-MINIMAL-BLACK-WALLPAPER.sh
+│
+├── ORBIT-Minimal-Black-Wallpaper.jpg
+└── ORBIT-Interface.png
+```
+
+`ORBIT-Interface.png` is the screenshot displayed in the Interface Preview section above. Upload it to the repository root for the image to appear in the README.
+
+---
+
+## 🔒 Local Data and Privacy
+
+ORBIT is designed around local storage.
+
+Tasks, study-session history, and personal photos are intended to remain on the user's computer rather than being uploaded automatically.
+
+Typical local locations include:
+
+- Personal photos: `~/Pictures/ORBIT-Memories/`
+- Task data: `~/.local/share/orbit-desktop-layer/tasks.json`
+- Study-session history: `~/.local/share/orbit-desktop-layer/study-sessions.json`
+
+Do not commit personal photos, private task records, study histories, passwords, access tokens, or other sensitive information to GitHub.
+
+---
+
+## ♻️ Restore or Uninstall
+
+To restore the previous extension files:
 
 ```bash
 bash ./RESTORE-ORBIT-STUDY-FOCUS.sh
 ```
 
-Restore your prior wallpaper settings:
+To restore the previous wallpaper settings:
 
 ```bash
 bash ./RESTORE-ORBIT-MINIMAL-BLACK-WALLPAPER.sh
 ```
 
-## Publish the latest source to GitHub
+Review the scripts before running them, and back up important data before making system changes.
 
-Run:
+---
 
-```bash
-bash ./PUBLISH-TO-GITHUB.sh
-```
+## 🧪 Validation
 
-The publisher commits only the known source, installer/restore scripts, documentation, metadata, and included wallpaper. It never uploads tasks, study history, personal photos, or files from your home data directory. If GitHub CLI (`gh`) is installed and authenticated, the script can create a new repository (private by default); otherwise, create an empty repository at https://github.com/new and provide its HTTPS or SSH URL. Authentication uses your configured `gh` or Git credential/SSH setup; do not put access tokens in the script.
+The project includes a `VALIDATION.txt` file documenting the checks performed during development.
 
-## Verification status
+Actual desktop rendering and interaction should be verified on the target Ubuntu GNOME system.
 
-JavaScript module syntax, shell-script syntax, metadata JSON, and ZIP integrity are checked as part of the build. Actual rendering still needs confirmation in the target user's GNOME Shell session.
+---
+
+## 🎯 Project Goal
+
+ORBIT aims to make the desktop more than a place to open applications. It is designed to make daily planning, focused study, progress tracking, and reflection part of the desktop experience.
+
+**Plan your work. Focus deeply. Track your progress. Improve every day.**
+
+---
+
+## 👨‍💻 Repository
+
+**GitHub:** [praxhub/orbit-productivity-desktop](https://github.com/praxhub/orbit-productivity-desktop)
+
+Contributions, suggestions, and feedback are welcome.
+
+---
+
+*ORBIT Productivity Desktop — Focus. Build. Repeat.*
