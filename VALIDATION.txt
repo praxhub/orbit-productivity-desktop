@@ -1,0 +1,14 @@
+ORBIT v12 build validation — 2026-10-18
+
+PASS — Node.js ES-module syntax check for extension.js.
+PASS — bash -n syntax check for every shipped shell script.
+PASS — metadata.json parses and contains UUID orbit-desktop-layer@local, version 12, and Shell target 50.
+PASS — Clock hero is fixed at 258px; the clock row and greeting stack use vertical center alignment.
+PASS — Retains the v11 centered Pomodoro overlay and dynamic mode caption.
+PASS — No news/video player or Clutter-GStreamer/yt-dlp dependency remains in extension.js.
+PASS — GitHub publisher stages only known source/package filenames; it does not stage task data, study records or personal photos.
+PASS — Simulated install and rollback completed successfully against a temporary HOME.
+PASS — Simulated GitHub publish script pushed the current source to a local bare Git remote without force-pushing.
+PASS — ZIP integrity check completed without errors.
+
+NOT RUN — Actual visual rendering inside the user's live GNOME Shell 50.1 session. Confirm the final clock/greeting position on the Ubuntu desktop.
