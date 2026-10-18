@@ -1,0 +1,10 @@
+{
+  "uuid": "orbit-desktop-layer@local",
+  "name": "ORBIT Study Focus — Minimal Black + Orange",
+  "description": "Minimal black-and-orange desktop layer for GNOME Shell 50 with vertically aligned clock/greeting, selectable task deadlines, large Pomodoro, local study/break history, productive study-hour tracker, memories, and daily Thirukkural. No news/video panel.",
+  "version": 12,
+  "shell-version": [
+    "50"
+  ],
+  "url": "https://gjs.guide/extensions/"
+}
