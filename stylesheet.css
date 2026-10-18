@@ -1,0 +1,823 @@
+/* ORBIT Reference Edition — neon liquid-glass desktop for GNOME Shell 50 */
+.orbit-root {
+  background-color: rgba(0, 0, 0, 0.015);
+}
+
+/* Match the visual safe area in the reference: clear the top bar and Ubuntu dock. */
+.orbit-layout {
+  padding: 42px 18px 20px 72px;
+  spacing: 18px;
+}
+.orbit-column { spacing: 14px; }
+.orbit-left, .orbit-center, .orbit-right { padding: 0; }
+
+.orbit-label {
+  color: rgba(248, 251, 255, 0.96);
+  font-size: 11px;
+}
+.orbit-muted { color: rgba(207, 223, 246, 0.74); }
+.orbit-small { font-size: 8px; letter-spacing: 0.45px; }
+.orbit-accent { color: #a9fff7; font-weight: 700; letter-spacing: 1px; }
+
+/* Shared translucent glass material. The wallpaper remains visible through it. */
+.orbit-card {
+  background-color: rgba(4, 13, 31, 0.68);
+  border: 1px solid rgba(172, 200, 255, 0.42);
+  border-radius: 20px;
+  padding: 13px 14px;
+  spacing: 9px;
+  box-shadow: 0 0 0 1px rgba(88, 142, 255, 0.10), 0 9px 28px rgba(1, 5, 18, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.13);
+}
+.orbit-card-head { spacing: 8px; min-height: 22px; }
+.orbit-card-title {
+  color: #f8fbff;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.15px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.42);
+}
+.orbit-card-subtitle { color: rgba(200, 218, 247, 0.72); font-size: 7px; letter-spacing: 0.65px; }
+.orbit-clock-card { min-height: 220px; border-color: rgba(119, 209, 255, 0.74); }
+.orbit-todo-card { min-height: 342px; border-color: rgba(94, 184, 255, 0.62); }
+.orbit-focus-card { min-height: 236px; border-color: rgba(191, 157, 255, 0.68); }
+.orbit-memory-card { min-height: 392px; border-color: rgba(189, 172, 255, 0.77); }
+.orbit-news-card { min-height: 430px; border-color: rgba(179, 166, 255, 0.78); }
+.orbit-kural-card { min-height: 420px; border-color: rgba(193, 174, 255, 0.72); }
+
+/* Clock dial and greeting. */
+.orbit-clock-row { spacing: 17px; padding: 1px 2px 0 2px; }
+.orbit-clock-stack {
+  min-width: 151px;
+  min-height: 151px;
+  border-radius: 999px;
+  border: 2px solid rgba(98, 231, 255, 0.94);
+  border-top-color: #db86ff;
+  border-left-color: #b88bff;
+  border-bottom-color: #5de8ff;
+  background-color: rgba(1, 8, 27, 0.73);
+  padding: 7px 5px;
+  spacing: 0;
+  box-shadow: 0 0 13px rgba(91, 128, 255, 0.22), inset 0 0 14px rgba(68, 143, 255, 0.08);
+}
+.orbit-period { color: #9cf4ff; font-size: 9px; font-weight: 700; letter-spacing: 1px; }
+.orbit-clock { color: #ffffff; font-size: 35px; font-weight: 300; letter-spacing: -0.6px; }
+.orbit-date { color: rgba(231, 240, 255, 0.82); font-size: 8px; letter-spacing: 0.15px; text-align: center; }
+.orbit-greeting-stack { spacing: 7px; padding: 0 2px; }
+.orbit-greeting { color: #ffffff; font-family: "URW Chancery L", "DejaVu Serif", serif; font-size: 22px; font-style: italic; font-weight: 500; }
+.orbit-greeting-signature { color: #f5edff; font-family: "URW Chancery L", "DejaVu Serif", serif; font-size: 17px; font-style: italic; }
+.orbit-quote { color: rgba(246, 249, 255, 0.90); font-size: 10px; line-height: 13px; }
+.orbit-clock-tag { color: #8eefff; font-size: 7px; font-weight: 700; letter-spacing: 0.6px; padding-top: 3px; }
+
+/* Buttons: pill-like translucent controls with a cool neon focus ring. */
+.orbit-button {
+  color: rgba(245, 249, 255, 0.94);
+  background-color: rgba(139, 174, 232, 0.105);
+  border: 1px solid rgba(182, 207, 255, 0.28);
+  border-radius: 999px;
+  padding: 6px 9px;
+  font-size: 8px;
+  font-weight: 700;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.11), 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+.orbit-button:hover, .orbit-button:focus {
+  background-color: rgba(117, 168, 255, 0.24);
+  border-color: rgba(168, 211, 255, 0.78);
+  color: #ffffff;
+}
+.orbit-button:active { background-color: rgba(120, 92, 255, 0.36); }
+.orbit-primary, .orbit-add-button {
+  color: #071b31;
+  background-color: rgba(124, 237, 235, 0.94);
+  border-color: rgba(220, 255, 255, 0.82);
+  box-shadow: 0 0 13px rgba(70, 222, 232, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.40);
+}
+.orbit-primary:hover, .orbit-add-button:hover { background-color: #b1fbff; color: #06152a; }
+.orbit-header-action { color: #ffffff; background-color: rgba(96, 119, 255, 0.34); border-color: rgba(145, 168, 255, 0.62); padding: 6px 11px; font-size: 8px; }
+.orbit-quiet-button { color: rgba(226, 238, 255, 0.80); background-color: rgba(225, 239, 255, 0.045); border-color: rgba(218, 235, 255, 0.16); font-size: 7px; padding: 5px 7px; }
+.orbit-add-button { padding: 7px 10px; }
+.orbit-priority-button { min-width: 68px; }
+.orbit-priority-high { color: #ffd2db; border-color: rgba(255, 133, 165, 0.51); background-color: rgba(196, 49, 91, 0.22); }
+.orbit-priority-medium { color: #ffe1a3; border-color: rgba(255, 210, 112, 0.42); }
+.orbit-priority-low { color: #abf8d2; border-color: rgba(101, 231, 170, 0.43); }
+
+/* Task list with the three compact tabs from the reference. */
+.orbit-todo-head { spacing: 10px; }
+.orbit-task-composer {
+  padding: 9px;
+  spacing: 7px;
+  border-radius: 13px;
+  background-color: rgba(5, 14, 35, 0.72);
+  border: 1px solid rgba(141, 184, 255, 0.27);
+}
+.orbit-input-row { spacing: 6px; min-height: 31px; }
+.orbit-entry {
+  color: #f7faff;
+  background-color: rgba(218, 234, 255, 0.075);
+  border: 1px solid rgba(179, 213, 255, 0.31);
+  border-radius: 9px;
+  padding: 6px 9px;
+  min-height: 29px;
+  font-size: 9px;
+}
+.orbit-entry StEntry { color: #f7faff; }
+.orbit-entry StLabel { color: rgba(220, 231, 249, 0.55); }
+.orbit-date-entry { font-size: 8px; }
+.orbit-input-caption { color: rgba(210, 225, 247, 0.52); font-size: 6px; letter-spacing: 0.4px; }
+.orbit-error { color: #ff9cac; font-size: 8px; }
+.orbit-task-tabs { spacing: 4px; padding-bottom: 2px; }
+.orbit-task-tab { color: rgba(213, 228, 250, 0.77); padding: 6px 7px; background-color: rgba(5, 13, 31, 0.42); border-color: rgba(162, 193, 247, 0.14); font-size: 8px; font-weight: 500; }
+.orbit-task-tab.selected { color: #ffffff; background-color: rgba(64, 137, 255, 0.43); border-color: rgba(120, 191, 255, 0.88); box-shadow: 0 0 12px rgba(62, 139, 255, 0.22); }
+.orbit-task-scroll { min-height: 145px; }
+.orbit-task-list { spacing: 1px; padding: 1px 2px 2px 0; }
+.orbit-task-row { spacing: 6px; padding: 7px 2px; border-bottom: 1px solid rgba(218, 233, 255, 0.11); }
+.orbit-task-description { spacing: 2px; }
+.orbit-task-text { color: rgba(247, 250, 255, 0.96); font-size: 9px; }
+.orbit-task-text.completed { color: rgba(207, 223, 243, 0.45); text-decoration: line-through; }
+.orbit-check { min-width: 20px; padding: 2px; color: #9fdbff; font-size: 14px; }
+.orbit-check.done { color: #8df2c6; }
+.orbit-priority-tag { font-size: 7px; font-weight: 700; padding: 3px 6px; border-radius: 7px; }
+.orbit-priority-tag.orbit-priority-high { color: #ffc7d4; background-color: rgba(221, 54, 92, 0.18); }
+.orbit-priority-tag.orbit-priority-medium { color: #ffdfa0; background-color: rgba(229, 166, 45, 0.17); }
+.orbit-priority-tag.orbit-priority-low { color: #9df0c7; background-color: rgba(37, 171, 118, 0.18); }
+.orbit-due { color: rgba(203, 221, 247, 0.68); font-size: 7px; }
+.orbit-overdue { color: #ff9eae; }
+.orbit-remove { color: rgba(216, 231, 253, 0.58); padding: 3px 5px; font-size: 13px; }
+.orbit-empty-tasks { color: rgba(218, 232, 250, 0.67); font-size: 10px; padding: 26px 7px; text-align: center; }
+.orbit-task-footer { spacing: 7px; padding-top: 2px; }
+.orbit-task-count { color: #a1f4ef; font-size: 7px; letter-spacing: 0.25px; }
+
+/* Pomodoro ring and preset information. */
+.orbit-mode-row { spacing: 4px; }
+.orbit-mode-button { padding: 6px 5px; font-size: 7px; font-weight: 600; }
+.orbit-mode-button.selected { color: #ffffff; background-color: rgba(94, 65, 255, 0.74); border-color: rgba(184, 164, 255, 0.91); box-shadow: 0 0 11px rgba(126, 87, 255, 0.28); }
+.orbit-focus-body { spacing: 13px; padding-top: 3px; }
+.orbit-timer-column { spacing: 6px; }
+.orbit-timer-dial {
+  min-width: 132px;
+  min-height: 132px;
+  border-radius: 999px;
+  border: 3px solid rgba(144, 110, 255, 0.94);
+  border-top-color: #e27dff;
+  border-left-color: #c086ff;
+  border-bottom-color: #668bff;
+  background-color: rgba(4, 8, 30, 0.71);
+  padding: 7px;
+  spacing: 0;
+  box-shadow: 0 0 15px rgba(147, 84, 255, 0.20), inset 0 0 14px rgba(114, 101, 255, 0.10);
+}
+.orbit-timer { color: #ffffff; font-size: 25px; font-weight: 400; letter-spacing: -0.2px; }
+.orbit-timer-caption { color: #d9d2ff; font-size: 8px; font-weight: 700; letter-spacing: 0.4px; }
+.orbit-timer-status { color: rgba(213, 228, 255, 0.68); font-size: 6px; letter-spacing: 0.35px; text-align: center; }
+.orbit-timer-actions { spacing: 5px; }
+.orbit-timer-actions .orbit-primary { padding: 6px 8px; font-size: 7px; }
+.orbit-reset-button { min-width: 25px; padding: 5px 6px; font-size: 12px; }
+.orbit-focus-stats { min-width: 116px; padding: 8px 9px; spacing: 8px; border-radius: 12px; background-color: rgba(3, 10, 28, 0.52); border: 1px solid rgba(163, 179, 255, 0.20); }
+.orbit-focus-stat-title { color: #ffffff; font-size: 9px; font-weight: 800; }
+.orbit-focus-stat { color: rgba(223, 231, 255, 0.84); font-size: 8px; }
+.orbit-mini-bars { spacing: 6px; padding-top: 3px; }
+.orbit-mini-bar { border-radius: 3px; background-color: rgba(141, 115, 255, 0.88); }
+.orbit-mini-bar:nth-child(2n) { background-color: rgba(255, 139, 96, 0.86); }
+.orbit-row { spacing: 6px; }
+
+/* Photo memories: large landscape with four clickable thumbnails. */
+.orbit-photo {
+  background-color: rgba(213, 232, 255, 0.05);
+  border: 1px solid rgba(225, 239, 255, 0.31);
+  border-radius: 13px;
+  min-height: 175px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+.orbit-photo-placeholder { color: rgba(214, 232, 255, 0.76); font-size: 9px; letter-spacing: 0.85px; text-align: center; padding: 12px; }
+.orbit-photo-thumbnails { spacing: 8px; min-height: 90px; }
+.orbit-photo-thumb { min-width: 55px; min-height: 90px; border-radius: 10px; background-color: rgba(192, 213, 250, 0.12); border: 1px solid rgba(207, 225, 255, 0.32); }
+.orbit-photo-thumb.current { border: 2px solid #9a8cff; box-shadow: 0 0 10px rgba(134, 115, 255, 0.30); }
+.orbit-photo-thumb:hover { border-color: #9ceaff; }
+.orbit-photo-footer { spacing: 5px; }
+.orbit-photo-caption { color: rgba(213, 230, 255, 0.70); }
+
+/* Wallpaper motto in the open center-bottom area. */
+.orbit-center-spacer { min-height: 20px; }
+.orbit-wall-quote { spacing: 8px; padding: 0 8px 32px 8px; }
+.orbit-wall-quote-text { color: rgba(250, 250, 255, 0.96); font-family: "Cantarell", sans-serif; font-size: 17px; font-style: italic; text-align: center; text-shadow: 0 2px 7px rgba(0, 0, 0, 0.82); }
+.orbit-wall-quote-underline { color: #9f87ff; font-size: 12px; text-align: center; }
+
+/* News panel: this is a static illustrative thumbnail; buttons open live search results. */
+.orbit-news-card { spacing: 8px; }
+.orbit-news-status-pill { color: #c4d4ff; font-size: 7px; padding: 4px 7px; border-radius: 999px; background-color: rgba(99, 104, 255, 0.17); border: 1px solid rgba(153, 151, 255, 0.27); }
+.orbit-signal-row { spacing: 7px; }
+.orbit-signal-dot { width: 6px; height: 6px; border-radius: 4px; background-color: #ffc36e; }
+.orbit-signal-dot.online { background-color: #7ff6bf; }
+.orbit-signal-dot.offline { background-color: #ff8da3; }
+.orbit-signal-status { color: rgba(215, 231, 255, 0.73); font-size: 7px; letter-spacing: 0.15px; }
+.orbit-news-tabs { spacing: 4px; }
+.orbit-news-button { min-height: 25px; padding: 5px 6px; color: rgba(236, 243, 255, 0.92); font-size: 7px; letter-spacing: 0.1px; border-radius: 9px; }
+.orbit-news-vlsi { color: #eadbff; border-color: rgba(192, 153, 255, 0.54); }
+.orbit-news-video-frame { min-height: 188px; border-radius: 12px; border: 1px solid rgba(153, 190, 255, 0.60); background-color: rgba(1, 5, 14, 0.98); box-shadow: 0 0 16px rgba(64, 154, 255, 0.18); clip: true; }
+.orbit-news-video-placeholder { color: rgba(225, 239, 255, 0.88); background-color: rgba(3, 10, 26, 0.92); border-radius: 11px; padding: 14px; font-size: 9px; font-weight: 800; text-align: center; }
+.orbit-news-video-title { color: #f1f6ff; font-size: 9px; font-weight: 700; padding: 3px 2px 0; }
+.orbit-news-video-status { color: #77e7f3; font-size: 7px; font-weight: 800; letter-spacing: 0.9px; padding: 1px 2px 2px; }
+.orbit-news-video-controls { spacing: 5px; padding-bottom: 2px; }
+.orbit-news-control { min-height: 27px; padding: 5px 7px; font-size: 7px; }
+.orbit-news-open-source { color: #eaf4ff; border-radius: 8px; border: 1px solid rgba(121, 185, 255, 0.54); background-color: rgba(36, 70, 118, 0.55); padding: 5px 7px; font-size: 7px; }
+.orbit-news-open-source:hover { background-color: rgba(67, 116, 194, 0.78); }
+.orbit-news-button.selected { color: #ffffff; border-color: rgba(130, 132, 255, 0.96); background-color: rgba(86, 91, 218, 0.65); box-shadow: 0 0 10px rgba(125, 114, 255, 0.32); }
+
+.orbit-news-link-list { spacing: 1px; padding-top: 1px; }
+.orbit-news-link { color: rgba(243, 248, 255, 0.91); background-color: rgba(223, 237, 255, 0.025); border-width: 0 0 1px 0; border-color: rgba(220, 233, 255, 0.10); border-radius: 0; padding: 6px 3px; text-align: left; font-size: 8px; font-weight: 500; }
+.orbit-news-link:hover { color: #ffffff; background-color: rgba(119, 147, 255, 0.14); }
+
+/* Thirukkural reading card. */
+.orbit-kural-number-row { spacing: 8px; }
+.orbit-kural-number { color: #ffd67d; font-size: 8px; font-weight: 800; letter-spacing: 0.7px; }
+.orbit-round-button { min-width: 23px; min-height: 23px; padding: 2px; font-size: 14px; }
+.orbit-tamil { color: #80f2ee; font-size: 16px; font-weight: 700; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.34); }
+.orbit-section-label { color: #b9aaff; font-size: 7px; font-weight: 800; letter-spacing: 1px; padding-top: 3px; }
+.orbit-kural-meaning { color: rgba(248, 250, 255, 0.94); font-size: 9px; }
+.orbit-kural-note { color: rgba(219, 232, 251, 0.80); font-size: 9px; }
+
+/* Progress track and its fill. */
+.orbit-progress-track { min-height: 5px; height: 5px; background-color: rgba(212, 229, 255, 0.15); border-radius: 5px; }
+.orbit-progress-fill { min-height: 5px; height: 5px; background-color: #35e2af; border-radius: 5px; }
+
+
+/* ORBIT Readability Fix — accessible contrast and roomier text. The original
+   glass treatment remains, but text is less transparent and the panels are darker. */
+.orbit-layout {
+  padding: 34px 16px 12px 70px;
+  spacing: 12px;
+}
+.orbit-column { spacing: 10px; }
+.orbit-card {
+  background-color: rgba(3, 9, 25, 0.80);
+  border: 1px solid rgba(177, 211, 255, 0.62);
+  border-radius: 18px;
+  padding: 12px 13px;
+  spacing: 7px;
+  box-shadow: 0 0 0 1px rgba(88, 142, 255, 0.16), 0 9px 24px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+.orbit-label { color: rgba(252, 253, 255, 0.99); font-size: 12px; }
+.orbit-muted { color: rgba(230, 239, 255, 0.92); }
+.orbit-small { font-size: 10px; letter-spacing: 0.12px; }
+.orbit-accent { color: #a9fff7; }
+.orbit-card-head { spacing: 6px; min-height: 24px; }
+.orbit-card-title { color: #ffffff; font-size: 17px; font-weight: 800; letter-spacing: 0.12px; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.78); }
+.orbit-card-subtitle { color: rgba(226, 237, 255, 0.92); font-size: 10px; letter-spacing: 0.12px; }
+
+/* Compact the overall cards just enough to fit a 1650 × 930 desktop while
+   making clock and timer dials truly circular rather than vertically stretched. */
+.orbit-clock-card { min-height: 204px; }
+.orbit-todo-card { min-height: 320px; }
+.orbit-focus-card { min-height: 242px; }
+.orbit-memory-card { min-height: 372px; }
+.orbit-news-card { min-height: 420px; spacing: 6px; }
+.orbit-kural-card { min-height: 372px; }
+.orbit-clock-row { spacing: 13px; padding: 1px 2px 0 2px; }
+.orbit-clock-stack { width: 168px; height: 168px; min-width: 168px; min-height: 168px; border-radius: 999px; padding: 7px 5px; }
+.orbit-period { color: #b4fbff; font-size: 11px; font-weight: 800; letter-spacing: 0.6px; }
+.orbit-clock { color: #ffffff; font-size: 39px; font-weight: 400; letter-spacing: -0.8px; }
+.orbit-date { color: rgba(245, 249, 255, 0.94); font-size: 10px; letter-spacing: 0; text-align: center; }
+.orbit-greeting-stack { spacing: 6px; padding: 0 2px; }
+.orbit-greeting { color: #ffffff; font-size: 23px; font-weight: 600; text-shadow: 0 1px 5px rgba(0, 0, 0, 0.80); }
+.orbit-greeting-signature { color: #f8f4ff; font-size: 19px; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.72); }
+.orbit-quote { color: rgba(250, 252, 255, 0.97); font-size: 12px; line-height: 15px; }
+.orbit-clock-tag { color: #9af7ff; font-size: 9px; font-weight: 800; letter-spacing: 0.25px; padding-top: 3px; }
+
+/* Controls: stronger contrast and accessible hit areas. */
+.orbit-button { color: #f8fbff; background-color: rgba(122, 157, 221, 0.16); border-color: rgba(190, 216, 255, 0.42); border-radius: 999px; padding: 6px 9px; font-size: 10px; font-weight: 700; }
+.orbit-button:hover, .orbit-button:focus { background-color: rgba(117, 168, 255, 0.32); border-color: rgba(190, 225, 255, 0.95); color: #ffffff; }
+.orbit-primary, .orbit-add-button { color: #061a2c; background-color: #82f3ed; border-color: rgba(233, 255, 255, 0.95); }
+.orbit-header-action { font-size: 10px; padding: 7px 10px; }
+.orbit-quiet-button { color: rgba(242, 247, 255, 0.96); background-color: rgba(226, 239, 255, 0.075); border-color: rgba(218, 235, 255, 0.32); font-size: 9px; padding: 6px 8px; }
+.orbit-add-button { padding: 7px 10px; }
+.orbit-priority-button { min-width: 76px; }
+
+/* To-do: full-size row labels, readable form fields, and wrapped long task names. */
+.orbit-task-composer { background-color: rgba(2, 8, 22, 0.88); padding: 9px; spacing: 7px; }
+.orbit-input-row { spacing: 6px; min-height: 34px; }
+.orbit-entry { color: #ffffff; background-color: rgba(207, 229, 255, 0.11); border: 1px solid rgba(194, 220, 255, 0.48); border-radius: 9px; padding: 7px 9px; min-height: 32px; font-size: 12px; }
+.orbit-entry StEntry { color: #ffffff; }
+.orbit-entry StLabel { color: rgba(238, 246, 255, 0.82); }
+.orbit-date-entry { font-size: 11px; }
+.orbit-input-caption { color: rgba(233, 242, 255, 0.82); font-size: 9px; letter-spacing: 0.1px; }
+.orbit-error { color: #ffb6c3; font-size: 11px; }
+.orbit-task-tabs { spacing: 4px; padding-bottom: 2px; }
+.orbit-task-tab { color: #edf4ff; padding: 7px 7px; background-color: rgba(2, 9, 23, 0.72); border-color: rgba(162, 193, 247, 0.28); font-size: 10px; font-weight: 600; }
+.orbit-task-tab.selected { color: #ffffff; background-color: rgba(64, 137, 255, 0.58); border-color: rgba(140, 205, 255, 0.96); }
+.orbit-task-scroll { min-height: 142px; }
+.orbit-task-list { spacing: 1px; padding: 1px 2px 2px 0; }
+.orbit-task-row { spacing: 6px; padding: 7px 2px; border-bottom: 1px solid rgba(218, 233, 255, 0.19); }
+.orbit-task-text { color: #ffffff; font-size: 12px; }
+.orbit-task-text.completed { color: rgba(226, 236, 250, 0.60); }
+.orbit-check { min-width: 22px; padding: 2px; color: #b2e5ff; font-size: 16px; }
+.orbit-priority-tag { font-size: 10px; font-weight: 800; padding: 3px 7px; border-radius: 7px; }
+.orbit-due { color: rgba(225, 237, 255, 0.88); font-size: 10px; }
+.orbit-remove { color: rgba(241, 247, 255, 0.82); padding: 3px 6px; font-size: 15px; }
+.orbit-empty-tasks { color: rgba(244, 249, 255, 0.90); font-size: 12px; padding: 23px 7px; text-align: center; }
+.orbit-task-footer { spacing: 7px; padding-top: 2px; }
+.orbit-task-count { color: #a1fff4; font-size: 10px; letter-spacing: 0.05px; }
+
+/* Focus dial keeps a fixed square allocation; labels remain legible beside it. */
+.orbit-mode-row { spacing: 4px; }
+.orbit-mode-button { padding: 7px 5px; font-size: 10px; font-weight: 700; }
+.orbit-mode-button.selected { background-color: rgba(94, 65, 255, 0.82); border-color: rgba(198, 181, 255, 0.98); }
+.orbit-focus-body { spacing: 10px; padding-top: 3px; }
+.orbit-timer-column { spacing: 5px; }
+.orbit-timer-dial { width: 156px; height: 156px; min-width: 156px; min-height: 156px; border-radius: 999px; border-width: 3px; padding: 7px; background-color: rgba(3, 6, 24, 0.86); }
+.orbit-timer { color: #ffffff; font-size: 31px; font-weight: 500; letter-spacing: -0.4px; }
+.orbit-timer-caption { color: #e7deff; font-size: 10px; font-weight: 800; letter-spacing: 0.3px; }
+.orbit-timer-status { color: rgba(236, 244, 255, 0.90); font-size: 9px; letter-spacing: 0.05px; text-align: center; }
+.orbit-timer-actions { spacing: 5px; }
+.orbit-timer-actions .orbit-primary { padding: 7px 8px; font-size: 9px; }
+.orbit-reset-button { min-width: 28px; padding: 5px 7px; font-size: 13px; }
+.orbit-focus-stats { min-width: 112px; padding: 8px; spacing: 7px; background-color: rgba(3, 8, 24, 0.75); border: 1px solid rgba(163, 179, 255, 0.32); }
+.orbit-focus-stat-title { color: #ffffff; font-size: 11px; font-weight: 800; }
+.orbit-focus-stat { color: rgba(240, 245, 255, 0.93); font-size: 11px; }
+.orbit-mini-bars { spacing: 5px; padding-top: 3px; }
+
+/* Memories: readable captions and rounded frames, keep user's own photos. */
+.orbit-photo { background-color: rgba(4, 12, 28, 0.28); border: 1px solid rgba(235, 244, 255, 0.50); border-radius: 14px; min-height: 175px; }
+.orbit-photo-placeholder { color: #f0f6ff; font-size: 12px; letter-spacing: 0.3px; text-align: center; padding: 12px; }
+.orbit-photo-thumbnails { spacing: 7px; min-height: 78px; }
+.orbit-photo-thumb { min-width: 55px; min-height: 78px; border-radius: 10px; background-color: rgba(192, 213, 250, 0.16); border: 1px solid rgba(224, 237, 255, 0.48); }
+.orbit-photo-caption { color: rgba(235, 244, 255, 0.91); font-size: 10px; }
+.orbit-photo-footer { spacing: 5px; }
+.orbit-wall-quote { spacing: 8px; padding: 0 8px 26px 8px; }
+.orbit-wall-quote-text { color: #ffffff; font-size: 18px; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95); }
+.orbit-wall-quote-underline { color: #b4a5ff; font-size: 13px; }
+
+/* News: brighter controls, readable status, and an obvious embedded video viewport. */
+.orbit-news-card { spacing: 6px; }
+.orbit-news-status-pill { color: #e1eaff; font-size: 9px; padding: 4px 7px; border-radius: 999px; background-color: rgba(99, 104, 255, 0.30); border: 1px solid rgba(153, 170, 255, 0.43); }
+.orbit-signal-row { spacing: 7px; }
+.orbit-signal-status { color: rgba(239, 246, 255, 0.94); font-size: 9px; letter-spacing: 0.05px; }
+.orbit-news-tabs { spacing: 4px; }
+.orbit-news-button { min-height: 28px; padding: 6px 5px; color: #f7faff; font-size: 10px; letter-spacing: 0; border-radius: 9px; }
+.orbit-news-video-frame { min-height: 188px; border-radius: 12px; border: 1px solid rgba(163, 205, 255, 0.78); background-color: rgba(0, 3, 11, 0.98); box-shadow: 0 0 18px rgba(64, 154, 255, 0.24); clip: true; }
+.orbit-news-video-placeholder { color: #ffffff; background-color: rgba(2, 8, 22, 0.97); border-radius: 11px; padding: 14px; font-size: 12px; font-weight: 800; text-align: center; }
+.orbit-news-video-title { color: #ffffff; font-size: 11px; font-weight: 700; padding: 3px 2px 0; }
+.orbit-news-video-status { color: #93f9ff; font-size: 9px; font-weight: 800; letter-spacing: 0.2px; padding: 1px 2px 2px; }
+.orbit-news-video-controls { spacing: 5px; padding-bottom: 2px; }
+.orbit-news-control { min-height: 29px; padding: 6px 7px; font-size: 9px; }
+.orbit-news-open-source { color: #f4f8ff; border-radius: 8px; border: 1px solid rgba(145, 200, 255, 0.72); background-color: rgba(36, 70, 118, 0.70); padding: 6px 7px; font-size: 9px; }
+.orbit-news-button.selected { color: #ffffff; border-color: rgba(170, 170, 255, 1.0); background-color: rgba(86, 91, 218, 0.82); }
+.orbit-news-link-list { spacing: 1px; padding-top: 1px; }
+.orbit-news-link { color: #ffffff; background-color: rgba(223, 237, 255, 0.06); border-width: 0 0 1px 0; border-color: rgba(220, 233, 255, 0.18); border-radius: 0; padding: 5px 3px; text-align: left; font-size: 10px; font-weight: 600; }
+.orbit-news-link:hover { color: #ffffff; background-color: rgba(119, 147, 255, 0.20); }
+
+/* Thirukkural: higher contrast and enough size for Tamil glyphs and explanations. */
+.orbit-kural-number { color: #ffe09a; font-size: 10px; font-weight: 800; letter-spacing: 0.25px; }
+.orbit-round-button { min-width: 27px; min-height: 27px; padding: 2px; font-size: 15px; }
+.orbit-tamil { color: #a4fffa; font-size: 20px; font-weight: 800; text-shadow: 0 1px 5px rgba(0, 0, 0, 0.72); }
+.orbit-section-label { color: #d3c8ff; font-size: 10px; font-weight: 800; letter-spacing: 0.35px; padding-top: 3px; }
+.orbit-kural-meaning { color: #ffffff; font-size: 12px; }
+.orbit-kural-note { color: rgba(239, 245, 255, 0.94); font-size: 12px; }
+.orbit-progress-track { min-height: 6px; height: 6px; background-color: rgba(212, 229, 255, 0.22); border-radius: 5px; }
+.orbit-progress-fill { min-height: 6px; height: 6px; background-color: #35e2af; border-radius: 5px; }
+
+
+/* ORBIT v7 visual corrections from the user's screenshots. */
+.orbit-dial-spacer {
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  border-width: 0;
+  background-color: transparent;
+}
+.orbit-clock-stack { spacing: 0; }
+.orbit-period { text-align: center; }
+.orbit-clock { text-align: center; }
+.orbit-date { text-align: center; }
+.orbit-timer { text-align: center; }
+.orbit-timer-caption { text-align: center; }
+
+/* The right reading card aligns with the News card, rather than being 14% narrower. */
+.orbit-kural-card { min-width: 0; min-height: 420px; }
+.orbit-kural-meaning {
+  color: rgba(255, 255, 255, 0.99);
+  font-size: 15px;
+  font-weight: 500;
+  padding-top: 2px;
+  padding-bottom: 7px;
+}
+.orbit-kural-note {
+  color: rgba(247, 250, 255, 0.98);
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 2px;
+  padding-bottom: 6px;
+}
+.orbit-kural-card .orbit-section-label {
+  color: #ded5ff;
+  font-size: 11px;
+  padding-top: 5px;
+}
+.orbit-kural-tamil { padding-bottom: 4px; }
+.orbit-news-video-frame { min-height: 220px; }
+.orbit-news-video-title { font-size: 12px; }
+.orbit-news-video-status { font-size: 10px; }
+.orbit-news-video-placeholder {
+  color: #ffffff;
+  background-color: rgba(1, 6, 18, 0.985);
+  font-size: 13px;
+  padding: 18px;
+}
+
+
+/* ORBIT v8 — final alignment/readability pass plus reliable daily-quote layout. */
+.orbit-clock-stack {
+  width: 168px;
+  min-width: 168px;
+  height: 168px;
+  min-height: 168px;
+  padding: 7px 4px;
+  spacing: 1px;
+}
+.orbit-period { min-width: 58px; font-size: 11px; text-align: center; letter-spacing: 0.2px; }
+.orbit-clock { min-width: 150px; font-size: 38px; letter-spacing: -0.4px; text-align: center; }
+.orbit-date { min-width: 148px; font-size: 10px; letter-spacing: 0; text-align: center; }
+.orbit-greeting-stack { min-width: 0; spacing: 7px; padding: 0 3px; }
+.orbit-greeting-signature { font-size: 19px; line-height: 23px; padding-top: 1px; padding-bottom: 1px; }
+.orbit-quote { font-size: 12px; line-height: 16px; padding-top: 1px; padding-bottom: 1px; }
+.orbit-wall-quote { width: 100%; spacing: 9px; padding: 0 10px 22px 10px; }
+.orbit-wall-quote-text { color: #ffffff; font-size: 18px; line-height: 24px; text-align: center; padding: 4px 8px; }
+.orbit-wall-quote-underline { color: #c3b8ff; font-size: 13px; text-align: center; }
+.orbit-kural-card { width: 100%; min-width: 0; }
+.orbit-kural-meaning { color: #ffffff; font-size: 15px; line-height: 20px; padding-top: 3px; padding-bottom: 9px; }
+.orbit-kural-note { color: rgba(250, 252, 255, 0.99); font-size: 14px; line-height: 19px; padding-top: 3px; padding-bottom: 8px; }
+.orbit-kural-tamil { font-size: 21px; line-height: 28px; }
+.orbit-news-video-frame { min-height: 220px; background-color: rgba(0, 3, 11, 0.98); }
+.orbit-news-video-placeholder { color: #ffffff; font-size: 13px; line-height: 18px; padding: 18px; text-align: center; }
+.orbit-news-video-title { color: #ffffff; font-size: 12px; line-height: 16px; }
+.orbit-news-video-status { color: #9df6ff; font-size: 10px; }
+.orbit-news-control { font-size: 9px; }
+
+
+/* ORBIT v9 — minimal matte-black and warm-orange palette. */
+.orbit-root { background-color: rgba(0, 0, 0, 0); }
+.orbit-layout { padding: 34px 16px 12px 70px; spacing: 12px; }
+.orbit-column { spacing: 10px; }
+.orbit-card {
+  background-color: rgba(7, 7, 7, 0.91);
+  border: 1px solid rgba(255, 139, 48, 0.43);
+  border-radius: 15px;
+  padding: 13px 14px;
+  spacing: 8px;
+  box-shadow: none;
+}
+.orbit-card-head { spacing: 9px; min-height: 22px; }
+.orbit-card-title { color: #fffaf5; font-size: 15px; font-weight: 700; letter-spacing: 0; text-shadow: none; }
+.orbit-card-subtitle { color: rgba(232, 221, 210, 0.70); font-size: 8px; letter-spacing: 0.35px; }
+.orbit-label { color: #fffaf5; font-size: 12px; }
+.orbit-muted { color: rgba(235, 225, 215, 0.78); }
+.orbit-small { color: rgba(235, 225, 215, 0.70); font-size: 9px; letter-spacing: 0.1px; }
+.orbit-accent { color: #ff983f; font-weight: 700; letter-spacing: 0.4px; }
+.orbit-clock-card, .orbit-todo-card, .orbit-focus-card, .orbit-memory-card, .orbit-news-card, .orbit-kural-card { border-color: rgba(255, 139, 48, 0.48); box-shadow: none; }
+.orbit-clock-stack { background-color: rgba(4, 4, 4, 0.88); border-color: #ff8a2b; border-top-color: #ffae67; border-right-color: #ff8a2b; border-bottom-color: #ff6e1f; border-left-color: #ff9b43; box-shadow: none; }
+.orbit-period { color: #ffad64; font-size: 10px; font-weight: 700; letter-spacing: 0.3px; }
+.orbit-clock { color: #fffaf5; font-size: 37px; font-weight: 400; letter-spacing: -0.25px; }
+.orbit-date { color: rgba(239, 230, 221, 0.84); font-size: 10px; letter-spacing: 0; }
+.orbit-greeting-stack { spacing: 6px; padding: 0 2px; }
+.orbit-greeting { color: #fffaf5; font-size: 22px; font-weight: 600; text-shadow: none; }
+.orbit-greeting-signature { color: #ffb77c; font-size: 18px; text-shadow: none; line-height: 23px; }
+.orbit-quote { color: rgba(245, 237, 229, 0.88); font-size: 12px; line-height: 16px; }
+.orbit-clock-tag { color: #ff943a; font-size: 9px; font-weight: 700; letter-spacing: 0.45px; }
+
+/* Neutral controls; one orange accent for selection and primary actions. */
+.orbit-button { color: #f7f1eb; background-color: rgba(255, 255, 255, 0.045); border: 1px solid rgba(255, 160, 87, 0.28); border-radius: 9px; padding: 6px 9px; font-size: 9px; font-weight: 600; box-shadow: none; }
+.orbit-button:hover, .orbit-button:focus { color: #fffaf5; background-color: rgba(255, 137, 43, 0.12); border-color: rgba(255, 160, 87, 0.75); }
+.orbit-button:active { background-color: rgba(255, 137, 43, 0.20); }
+.orbit-primary, .orbit-add-button { color: #160b03; background-color: #ff8a2b; border-color: #ffad67; box-shadow: none; }
+.orbit-primary:hover, .orbit-add-button:hover { color: #120801; background-color: #ffab5f; }
+.orbit-header-action { color: #160b03; background-color: #ff8a2b; border-color: #ffad67; padding: 6px 10px; font-size: 9px; }
+.orbit-quiet-button { color: rgba(245, 235, 225, 0.90); background-color: rgba(255, 255, 255, 0.04); border-color: rgba(255, 159, 83, 0.23); font-size: 9px; padding: 5px 8px; }
+.orbit-add-button { padding: 7px 10px; }
+.orbit-priority-button { min-width: 68px; }
+.orbit-priority-high { color: #ffc18a; border-color: rgba(255, 138, 43, 0.52); background-color: rgba(255, 138, 43, 0.13); }
+.orbit-priority-medium { color: #ffcf9a; border-color: rgba(255, 179, 101, 0.40); background-color: rgba(255, 179, 101, 0.08); }
+.orbit-priority-low { color: #d0c7be; border-color: rgba(218, 205, 191, 0.30); background-color: rgba(218, 205, 191, 0.045); }
+.orbit-task-composer { background-color: rgba(9, 8, 7, 0.93); border: 1px solid rgba(255, 139, 48, 0.22); border-radius: 11px; }
+.orbit-entry { color: #fffaf5; background-color: rgba(255, 255, 255, 0.045); border: 1px solid rgba(255, 160, 87, 0.30); border-radius: 8px; font-size: 10px; }
+.orbit-entry StEntry { color: #fffaf5; }
+.orbit-entry StLabel { color: rgba(238, 223, 207, 0.52); }
+.orbit-input-caption { color: rgba(235, 218, 200, 0.68); font-size: 8px; letter-spacing: 0.2px; }
+.orbit-error { color: #ff986f; font-size: 9px; }
+.orbit-task-tabs { spacing: 4px; }
+.orbit-task-tab { color: rgba(233, 224, 215, 0.82); background-color: rgba(255, 255, 255, 0.025); border-color: rgba(255, 160, 87, 0.18); font-size: 9px; border-radius: 8px; }
+.orbit-task-tab.selected { color: #160b03; background-color: #ff8a2b; border-color: #ffad67; box-shadow: none; }
+.orbit-task-scroll { min-height: 115px; }
+.orbit-task-row { border-bottom: 1px solid rgba(255, 170, 100, 0.14); }
+.orbit-task-text { color: #fffaf5; font-size: 11px; }
+.orbit-task-text.completed { color: rgba(228, 216, 204, 0.48); }
+.orbit-check { color: #ff983f; }
+.orbit-check.done { color: #ffb66f; }
+.orbit-priority-tag { font-size: 8px; border-radius: 6px; }
+.orbit-priority-tag.orbit-priority-high { color: #ffbc85; background-color: rgba(255, 125, 36, 0.14); }
+.orbit-priority-tag.orbit-priority-medium { color: #ffd09e; background-color: rgba(255, 177, 90, 0.10); }
+.orbit-priority-tag.orbit-priority-low { color: #d6c9bc; background-color: rgba(205, 191, 177, 0.06); }
+.orbit-due { color: rgba(228, 214, 200, 0.72); font-size: 8px; }
+.orbit-overdue { color: #ff855d; }
+.orbit-remove { color: rgba(238, 223, 208, 0.70); }
+.orbit-empty-tasks { color: rgba(232, 220, 207, 0.72); font-size: 11px; }
+.orbit-task-footer { spacing: 7px; }
+.orbit-task-count { color: #ff9a42; font-size: 8px; letter-spacing: 0.1px; }
+.orbit-progress-track { background-color: rgba(255, 255, 255, 0.10); }
+.orbit-progress-fill { background-color: #ff8a2b; }
+
+/* Focus timer: one crisp orange ring, no gradient/neon rainbow. */
+.orbit-mode-row { spacing: 4px; }
+.orbit-mode-button { padding: 6px 5px; font-size: 9px; font-weight: 600; }
+.orbit-mode-button.selected { color: #160b03; background-color: #ff8a2b; border-color: #ffad67; box-shadow: none; }
+.orbit-focus-body { spacing: 10px; padding-top: 3px; }
+.orbit-timer-dial { background-color: rgba(5, 5, 5, 0.93); border-color: #ff8a2b; border-top-color: #ffad67; border-left-color: #ff9b43; border-bottom-color: #e96a15; border-right-color: #ff8a2b; box-shadow: none; }
+.orbit-timer { color: #fffaf5; font-size: 26px; letter-spacing: 0; text-align: center; }
+.orbit-timer-caption { color: #ffb879; font-size: 9px; font-weight: 700; text-align: center; }
+.orbit-timer-status { color: rgba(230, 218, 205, 0.74); font-size: 8px; text-align: center; }
+.orbit-timer-actions .orbit-primary { padding: 6px 8px; font-size: 8px; }
+.orbit-reset-button { min-width: 25px; padding: 5px 6px; font-size: 12px; }
+.orbit-focus-stats { background-color: rgba(255, 255, 255, 0.025); border-color: rgba(255, 151, 65, 0.23); box-shadow: none; }
+.orbit-focus-stat-title { color: #fffaf5; font-size: 10px; }
+.orbit-focus-stat { color: rgba(235, 222, 209, 0.82); font-size: 9px; }
+.orbit-mini-bar, .orbit-mini-bar:nth-child(2n) { background-color: #ff8a2b; }
+
+/* Memories and the quote: allow the scenic background through, keep frames warm. */
+.orbit-photo { background-color: rgba(7, 7, 7, 0.45); border: 1px solid rgba(255, 160, 87, 0.30); box-shadow: none; }
+.orbit-photo-placeholder { color: rgba(244, 231, 218, 0.85); font-size: 10px; letter-spacing: 0.2px; }
+.orbit-photo-thumb { background-color: rgba(10, 10, 10, 0.55); border-color: rgba(255, 160, 87, 0.28); }
+.orbit-photo-thumb.current { border-color: #ff8a2b; box-shadow: none; }
+.orbit-photo-thumb:hover { border-color: #ffac63; }
+.orbit-photo-caption { color: rgba(235, 221, 206, 0.75); font-size: 9px; }
+.orbit-wall-quote { padding: 0 10px 22px 10px; spacing: 8px; }
+.orbit-wall-quote-text { color: #fffaf5; font-size: 17px; line-height: 23px; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.95); }
+.orbit-wall-quote-underline { color: #ff8a2b; font-size: 12px; }
+
+/* News panel: real video only; concise offline message and retry control. */
+.orbit-news-card { spacing: 7px; }
+.orbit-news-status-pill { color: #ffb16a; background-color: rgba(255, 138, 43, 0.10); border-color: rgba(255, 147, 60, 0.26); font-size: 8px; }
+.orbit-signal-dot { background-color: #ff9a42; }
+.orbit-signal-dot.online { background-color: #ff9a42; }
+.orbit-signal-dot.offline { background-color: #ff5c35; }
+.orbit-signal-status { color: rgba(235, 220, 204, 0.80); font-size: 9px; letter-spacing: 0; }
+.orbit-news-tabs { spacing: 4px; }
+.orbit-news-button { min-height: 28px; padding: 6px 5px; color: rgba(246, 237, 228, 0.90); background-color: rgba(255, 255, 255, 0.03); border-color: rgba(255, 157, 81, 0.22); font-size: 9px; border-radius: 8px; }
+.orbit-news-vlsi { color: #ffbb7e; border-color: rgba(255, 138, 43, 0.38); }
+.orbit-news-button.selected { color: #160b03; border-color: #ffac62; background-color: #ff8a2b; box-shadow: none; }
+.orbit-news-video-frame { min-height: 220px; border-radius: 10px; border: 1px solid rgba(255, 139, 48, 0.42); background-color: rgba(0, 0, 0, 0.98); box-shadow: none; clip: true; }
+.orbit-news-video-placeholder { color: #fff7ef; background-color: rgba(5, 5, 5, 0.98); border-radius: 9px; padding: 18px; font-size: 12px; font-weight: 600; line-height: 18px; text-align: center; }
+.orbit-news-video-title { color: #fff8f0; font-size: 11px; font-weight: 600; line-height: 15px; padding: 3px 2px 0; }
+.orbit-news-video-status { color: #ff9a42; font-size: 9px; font-weight: 700; letter-spacing: 0.25px; padding: 1px 2px 2px; }
+.orbit-news-video-controls { spacing: 5px; padding-bottom: 2px; }
+.orbit-news-control { min-height: 29px; padding: 6px 7px; font-size: 8px; }
+.orbit-news-retry { color: #170b02; background-color: #ff8a2b; border-color: #ffab60; }
+.orbit-news-open-source { color: #fff2e6; border-radius: 8px; border: 1px solid rgba(255, 156, 76, 0.36); background-color: rgba(255, 138, 43, 0.10); padding: 6px 7px; font-size: 8px; }
+.orbit-news-open-source:hover { background-color: rgba(255, 138, 43, 0.20); }
+.orbit-news-link-list { spacing: 1px; padding-top: 1px; }
+.orbit-news-link { color: rgba(243, 233, 222, 0.88); background-color: rgba(255, 255, 255, 0.025); border-width: 0 0 1px 0; border-color: rgba(255, 159, 83, 0.12); padding: 6px 3px; font-size: 9px; font-weight: 500; }
+.orbit-news-link:hover { color: #fffaf5; background-color: rgba(255, 138, 43, 0.11); }
+
+/* Thirukkural: clean reading typography in a low-noise black panel. */
+.orbit-kural-card { background-color: rgba(7, 7, 7, 0.91); border-color: rgba(255, 139, 48, 0.43); box-shadow: none; }
+.orbit-kural-number { color: #ffae68; font-size: 9px; font-weight: 700; letter-spacing: 0.2px; }
+.orbit-round-button { color: #fff3e8; min-width: 27px; min-height: 27px; border-color: rgba(255, 153, 68, 0.25); font-size: 15px; }
+.orbit-tamil, .orbit-kural-tamil { color: #ffb777; font-size: 20px; font-weight: 700; line-height: 28px; text-shadow: none; }
+.orbit-section-label { color: #ff9a42; font-size: 10px; font-weight: 700; letter-spacing: 0.25px; padding-top: 4px; }
+.orbit-kural-meaning { color: #fffaf5; font-size: 15px; font-weight: 500; line-height: 21px; padding-top: 3px; padding-bottom: 8px; }
+.orbit-kural-note { color: rgba(240, 228, 216, 0.90); font-size: 14px; line-height: 20px; padding-top: 3px; padding-bottom: 7px; }
+.orbit-kural-card .orbit-section-label { color: #ff9a42; font-size: 10px; padding-top: 5px; }
+.orbit-system-line { color: #ffb777; font-size: 10px; }
+.orbit-task-count, .orbit-clock-tag, .orbit-wall-quote-underline { color: #ff8a2b; }
+
+
+/* ORBIT v10 — minimal matte-black desktop, warm amber accent. */
+.orbit-root { background-color: rgba(0, 0, 0, 0); }
+.orbit-layout { padding: 34px 18px 18px 70px; spacing: 13px; }
+.orbit-column { spacing: 12px; }
+.orbit-card {
+  background-color: rgba(5, 5, 5, 0.88);
+  border: 1px solid rgba(255, 142, 49, 0.42);
+  border-radius: 15px;
+  padding: 13px 14px;
+  spacing: 9px;
+  box-shadow: none;
+}
+.orbit-card-head { spacing: 9px; min-height: 23px; }
+.orbit-card-title { color: #fffaf5; font-size: 16px; font-weight: 700; letter-spacing: 0; text-shadow: none; }
+.orbit-card-subtitle { color: rgba(232, 218, 202, 0.68); font-size: 9px; letter-spacing: 0.35px; }
+.orbit-label { color: #fffaf5; font-size: 12px; }
+.orbit-muted { color: rgba(236, 224, 210, 0.79); }
+.orbit-small { color: rgba(236, 224, 210, 0.72); font-size: 10px; letter-spacing: 0.1px; }
+.orbit-accent, .orbit-clock-tag, .orbit-task-count, .orbit-wall-quote-underline { color: #ff9233; }
+.orbit-clock-card { min-height: 230px; }
+.orbit-todo-card { min-height: 340px; }
+.orbit-memory-card { min-height: 295px; }
+.orbit-kural-card { min-height: 370px; background-color: rgba(5, 5, 5, 0.92); border-color: rgba(255, 142, 49, 0.39); box-shadow: none; }
+.orbit-clock-row { spacing: 15px; }
+.orbit-clock-stack { border: 2px solid #ff922f; border-top-color: #ffb66e; border-right-color: #ff922f; border-bottom-color: #c95e13; border-left-color: #f8a45d; background-color: rgba(2,2,2,0.92); box-shadow: none; }
+.orbit-period { color: #ffb36b; font-size: 10px; font-weight: 700; letter-spacing: 0.3px; }
+.orbit-clock { color: #fffaf5; font-size: 35px; font-weight: 400; letter-spacing: 0; }
+.orbit-date { color: rgba(239, 228, 216, 0.84); font-size: 10px; letter-spacing: 0; }
+.orbit-greeting-stack { spacing: 7px; padding: 0 2px; }
+.orbit-greeting { color: #fffaf5; font-family: Cantarell, sans-serif; font-size: 23px; font-style: normal; font-weight: 700; }
+.orbit-greeting-signature { color: #ffb16a; font-family: Cantarell, sans-serif; font-size: 18px; font-style: normal; }
+.orbit-quote { color: rgba(244, 235, 225, 0.90); font-size: 12px; line-height: 16px; }
+.orbit-button { color: #f7eee6; background-color: rgba(255,255,255,0.035); border: 1px solid rgba(255,154,75,0.23); border-radius: 8px; padding: 6px 9px; font-size: 10px; font-weight: 600; box-shadow: none; }
+.orbit-button:hover, .orbit-button:focus { background-color: rgba(255,139,43,0.13); border-color: rgba(255,166,95,0.76); color: #fffaf5; }
+.orbit-button:active { background-color: rgba(255,139,43,0.2); }
+.orbit-primary, .orbit-add-button, .orbit-header-action { color: #170b02; background-color: #ff922f; border-color: #ffb36f; box-shadow: none; }
+.orbit-primary:hover, .orbit-add-button:hover, .orbit-header-action:hover { color: #160a02; background-color: #ffac5d; }
+.orbit-header-action { padding: 6px 10px; font-size: 9px; }
+.orbit-quiet-button { color: rgba(244,230,215,0.86); background-color: rgba(255,255,255,0.025); border-color: rgba(255,154,75,0.18); font-size: 9px; padding: 5px 8px; }
+.orbit-task-composer { background-color: rgba(4,4,4,0.97); border: 1px solid rgba(255,145,49,0.35); border-radius: 12px; }
+.orbit-entry { color: #fffaf5; background-color: rgba(255,255,255,0.045); border: 1px solid rgba(255,160,87,0.31); border-radius: 8px; padding: 7px 9px; min-height: 31px; font-size: 11px; }
+.orbit-entry StEntry { color: #fffaf5; }
+.orbit-entry StLabel { color: rgba(235,219,203,0.58); }
+.orbit-date-entry { font-size: 11px; }
+.orbit-input-row { spacing: 6px; min-height: 34px; }
+.orbit-input-caption { color: rgba(235,219,203,0.70); font-size: 9px; letter-spacing: 0; }
+.orbit-error { color: #ff9c7d; font-size: 10px; }
+.orbit-task-tabs { spacing: 5px; }
+.orbit-task-tab { color: rgba(242,229,216,0.82); background-color: rgba(255,255,255,0.025); border-color: rgba(255,160,87,0.18); font-size: 10px; border-radius: 8px; }
+.orbit-task-tab.selected { color: #1b0c02; background-color: #ff922f; border-color: #ffb36f; box-shadow: none; }
+.orbit-task-scroll { min-height: 115px; }
+.orbit-task-row { spacing: 7px; border-bottom: 1px solid rgba(255,170,100,0.14); }
+.orbit-task-text { color: #fffaf5; font-size: 11px; }
+.orbit-priority-high { color: #ffbc93; border-color: rgba(255,138,43,0.52); background-color: rgba(255,138,43,0.13); }
+.orbit-priority-medium { color: #ffd0a0; border-color: rgba(255,179,101,0.40); background-color: rgba(255,179,101,0.08); }
+.orbit-priority-low { color: #d0c7be; border-color: rgba(218,205,191,0.30); background-color: rgba(218,205,191,0.045); }
+.orbit-due { color: rgba(228,214,200,0.78); font-size: 9px; }
+.orbit-overdue { color: #ff855d; }
+.orbit-empty-tasks { color: rgba(238,223,207,0.72); font-size: 12px; padding: 20px 7px; text-align: center; }
+.orbit-task-footer { spacing: 7px; padding-top: 2px; }
+.orbit-progress-track { min-height: 5px; height: 5px; background-color: rgba(255,255,255,0.10); border-radius: 5px; }
+.orbit-progress-fill { min-height: 5px; height: 5px; background-color: #ff922f; border-radius: 5px; }
+
+/* Calendar popover rendered inline: navigate month, select any day, or clear deadline. */
+.orbit-calendar-picker { background-color: rgba(7,7,7,0.99); border: 1px solid rgba(255,146,47,0.42); border-radius: 10px; padding: 7px; spacing: 5px; }
+.orbit-calendar-head { spacing: 8px; min-height: 28px; }
+.orbit-calendar-month { color: #fff4e7; font-size: 12px; font-weight: 700; text-align: center; }
+.orbit-calendar-nav { min-width: 28px; min-height: 25px; padding: 2px; color: #ff9a43; }
+.orbit-calendar-weekdays, .orbit-calendar-week { spacing: 3px; }
+.orbit-calendar-weekday { color: rgba(255,173,104,0.83); font-size: 8px; font-weight: 700; text-align: center; }
+.orbit-calendar-day { color: #f7eee6; background-color: rgba(255,255,255,0.025); border-color: rgba(255,160,87,0.15); border-radius: 5px; padding: 2px; min-height: 26px; font-size: 10px; }
+.orbit-calendar-day.today { border-color: #ff922f; }
+.orbit-calendar-day.selected { color: #1a0b02; background-color: #ff922f; border-color: #ffb36f; }
+.orbit-calendar-empty { background-color: transparent; }
+.orbit-date-picker-toggle { color: #1a0b02; background-color: #ff922f; border-color: #ffb36f; padding: 6px 8px; font-size: 9px; }
+.orbit-date-clear { padding: 5px 6px; font-size: 8px; }
+
+/* Main Pomodoro centerpiece and long-lived local study tracker. */
+.orbit-focus-card { min-height: 340px; border-color: rgba(255,146,47,0.60); }
+.orbit-focus-hero { padding: 15px; spacing: 10px; }
+.orbit-focus-hero-body { spacing: 17px; padding-top: 3px; }
+.orbit-mode-row { spacing: 5px; }
+.orbit-mode-button { padding: 8px 5px; font-size: 10px; }
+.orbit-mode-button.selected { color: #170b02; background-color: #ff922f; border-color: #ffb36f; box-shadow: none; }
+.orbit-timer-column-large { spacing: 8px; min-width: 245px; }
+.orbit-timer-dial-large { min-width: 220px; min-height: 220px; border-radius: 999px; border: 3px solid #ff922f; border-top-color: #ffbd7d; border-bottom-color: #cf5d11; background-color: rgba(2,2,2,0.96); padding: 8px; spacing: 0; box-shadow: none; }
+.orbit-timer-large { color: #fffaf5; font-size: 40px; font-weight: 400; text-align: center; }
+.orbit-timer-caption { color: #ffad62; font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-align: center; }
+.orbit-timer-status-large { color: rgba(237,222,207,0.78); font-size: 10px; text-align: center; }
+.orbit-timer-actions { spacing: 6px; }
+.orbit-timer-actions .orbit-primary { padding: 9px 10px; font-size: 10px; }
+.orbit-reset-button { min-width: 55px; padding: 6px 8px; font-size: 9px; }
+.orbit-focus-stats-large { padding: 10px 11px; spacing: 9px; border-radius: 11px; background-color: rgba(255,255,255,0.025); border: 1px solid rgba(255,154,75,0.24); box-shadow: none; }
+.orbit-focus-stat-title, .orbit-subsection-title { color: #ff9a43; font-size: 10px; font-weight: 800; letter-spacing: 0.45px; }
+.orbit-study-totals { spacing: 6px; }
+.orbit-study-total-tile { background-color: rgba(255,255,255,0.025); border: 1px solid rgba(255,154,75,0.17); border-radius: 8px; padding: 7px 8px; spacing: 4px; }
+.orbit-total-caption { color: rgba(235,219,203,0.72); font-size: 8px; font-weight: 700; }
+.orbit-total-value { color: #fffaf5; font-size: 19px; font-weight: 700; }
+.orbit-hours-scroll { min-height: 70px; }
+.orbit-productive-hours { spacing: 5px; }
+.orbit-hour-row { spacing: 7px; min-height: 15px; }
+.orbit-hour-label { color: rgba(239,226,212,0.80); font-size: 10px; }
+.orbit-hour-track { min-height: 7px; height: 7px; border-radius: 5px; background-color: rgba(255,255,255,0.10); }
+.orbit-hour-fill { min-height: 7px; height: 7px; border-radius: 5px; background-color: #ff922f; }
+.orbit-hour-value { color: #ffb36f; font-size: 10px; min-width: 48px; text-align: right; }
+.orbit-tracker-empty { color: rgba(235,221,207,0.70); font-size: 11px; padding: 8px 2px; }
+.orbit-history-card { min-height: 270px; }
+.orbit-history-intro { color: rgba(233,220,206,0.78); font-size: 11px; line-height: 15px; }
+.orbit-log-scroll { min-height: 100px; }
+.orbit-study-log { spacing: 0; }
+.orbit-study-log-row { spacing: 9px; padding: 8px 2px; border-bottom: 1px solid rgba(255,154,75,0.15); }
+.orbit-log-mode { min-width: 86px; font-size: 9px; font-weight: 800; }
+.orbit-log-focus { color: #ff9c45; }
+.orbit-log-break { color: rgba(236,224,210,0.80); }
+.orbit-log-detail { spacing: 2px; }
+.orbit-log-main { color: #fffaf5; font-size: 11px; }
+.orbit-log-sub { color: rgba(235,220,204,0.62); font-size: 8px; }
+
+/* Memories, minimal wallpaper quote, and Thirukkural stay secondary to focus. */
+.orbit-memory-card { min-height: 250px; }
+.orbit-photo { min-height: 150px; border: 1px solid rgba(255,154,75,0.26); background-color: rgba(0,0,0,0.5); border-radius: 10px; box-shadow: none; }
+.orbit-photo-thumbnails { spacing: 6px; min-height: 62px; }
+.orbit-photo-thumb { min-width: 50px; min-height: 60px; border-radius: 7px; background-color: rgba(255,255,255,0.035); border: 1px solid rgba(255,154,75,0.24); }
+.orbit-photo-thumb.current { border: 2px solid #ff922f; box-shadow: none; }
+.orbit-photo-thumb:hover { border-color: #ffb36f; }
+.orbit-photo-footer { spacing: 5px; }
+.orbit-photo-caption { color: rgba(232,218,202,0.70); }
+.orbit-center-spacer { min-height: 3px; }
+.orbit-wall-quote { spacing: 5px; padding: 0 8px 7px 8px; }
+.orbit-wall-quote-text { color: #fffaf5; font-size: 15px; line-height: 20px; text-shadow: 0 1px 5px rgba(0,0,0,0.9); }
+.orbit-wall-quote-underline { color: #ff922f; font-size: 11px; }
+.orbit-kural-card { background-color: rgba(5,5,5,0.94); border-color: rgba(255,142,49,0.40); min-width: 0; min-height: 360px; box-shadow: none; }
+.orbit-kural-number { color: #ffad62; font-size: 10px; font-weight: 800; letter-spacing: 0.3px; }
+.orbit-tamil { color: #ffb166; font-size: 17px; font-weight: 700; text-shadow: none; line-height: 24px; }
+.orbit-section-label { color: #ff9a43; font-size: 10px; font-weight: 800; letter-spacing: 0.3px; padding-top: 5px; }
+.orbit-kural-meaning { color: #fff8ef; font-size: 14px; line-height: 19px; }
+.orbit-kural-note { color: rgba(239,226,212,0.88); font-size: 13px; line-height: 18px; }
+.orbit-round-button { color: #ffad62; border-color: rgba(255,154,75,0.28); }
+
+
+/* ORBIT v11 — stable Pomodoro dial content and caption alignment */
+.orbit-timer-dial-large {
+  min-width: 220px;
+  min-height: 220px;
+  border-radius: 999px;
+  padding: 0;
+  spacing: 0;
+}
+.orbit-timer-content {
+  min-width: 160px;
+  spacing: 4px;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+.orbit-timer-large {
+  min-width: 160px;
+  color: #fffaf5;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: center;
+}
+.orbit-timer-caption {
+  min-width: 160px;
+  color: #ffad62;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.45px;
+  text-align: center;
+}
+.orbit-timer-status-large {
+  min-width: 220px;
+  color: rgba(237,222,207,0.82);
+  font-size: 10px;
+  text-align: center;
+}
+.orbit-timer-actions {
+  spacing: 6px;
+  min-width: 224px;
+}
+.orbit-timer-actions .orbit-start-button {
+  min-width: 150px;
+  padding: 9px 10px;
+  font-size: 10px;
+}
+.orbit-timer-actions .orbit-reset-button {
+  min-width: 54px;
+  padding: 7px 8px;
+  font-size: 9px;
+}
+
+
+/* ORBIT v12 — fixed clock hero height and vertically centered greeting */
+.orbit-clock-card {
+  min-height: 258px;
+  max-height: 258px;
+  padding: 12px 14px;
+  spacing: 0;
+}
+.orbit-clock-row {
+  min-height: 220px;
+  spacing: 18px;
+  padding: 0;
+}
+.orbit-clock-stack {
+  width: 168px;
+  height: 168px;
+  min-width: 168px;
+  min-height: 168px;
+  padding: 6px;
+  spacing: 0;
+}
+.orbit-greeting-stack {
+  spacing: 7px;
+  padding: 0 2px;
+}
+.orbit-greeting {
+  font-size: 23px;
+  line-height: 28px;
+}
+.orbit-greeting-signature {
+  font-size: 18px;
+  line-height: 23px;
+}
+.orbit-quote {
+  font-size: 12px;
+  line-height: 16px;
+}
+.orbit-clock-tag {
+  font-size: 9px;
+  padding-top: 2px;
+}
